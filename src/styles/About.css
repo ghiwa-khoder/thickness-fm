@@ -1,0 +1,133 @@
+/* Full Page Styling for About Section */
+.about-full-page {
+    height: 80vh; /* Full page height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f6f6f6; /* Light background */
+    overflow: hidden;
+  }
+  
+  .about-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    width: 90%;
+    gap: 40px; /* Space between content and image */
+  }
+  
+  /* Left Section: Content */
+  .about-content {
+    flex: 1;
+  }
+  
+  .about-title {
+    font-size: 3rem;
+    color: #ffffff; /* Dark blue */
+    margin-bottom: 20px;
+    position: relative;
+  }
+  
+  .about-title::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 60px;
+    height: 4px;
+    background-color: #78ba50; /* Green underline */
+    border-radius: 2px;
+  }
+  
+  .about-content p {
+    font-size: 1.2rem;
+    color: #dddada; /* Subtle grey text */
+    line-height: 1.8;
+    margin-bottom: 20px;
+  }
+  
+  .about-button {
+    background-color: #78ba50; /* Green button */
+    color: #ffffff;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 30px;
+    padding: 12px 30px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    text-transform: uppercase;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15); /* Subtle shadow */
+  }
+  
+  .about-button:hover {
+    background-color: #66a842; /* Darker green */
+    transform: translateY(-3px); /* Lift effect */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Stronger shadow */
+  }
+  
+  /* Right Section: Image */
+  .about-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .about-image img {
+    width: 100%;
+    max-width: 600px; /* Adjust image size */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15); /* Subtle shadow */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  }
+  
+  .about-image img:hover {
+    transform: scale(1.05); /* Zoom effect */
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.25); /* Stronger shadow */
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .about-container {
+      flex-direction: column; /* Stack content vertically */
+      text-align: center;
+      gap: 20px;
+    }
+  
+    .about-content {
+      text-align: center;
+    }
+  
+    .about-image img {
+      max-width: 100%;
+    }
+  
+    .about-title {
+      font-size: 2.5rem;
+    }
+  
+    .about-content p {
+      font-size: 1rem;
+    }
+  
+    .about-button {
+      font-size: 1rem;
+      padding: 10px 20px;
+    }
+  }
+  /* Fade-in animation for the container */
+.about-container {
+    animation: fadeIn 1s ease-in-out;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }

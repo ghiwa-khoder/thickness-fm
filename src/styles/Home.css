@@ -1,0 +1,1167 @@
+/* Hero Section */
+.hero-section {
+    position: relative;
+    
+    width: 100%;
+    height: 60vh; /* Adjust height for the desired section size */
+    background: url('../assets/hero-image.png') no-repeat center center/cover; /* Add your hero image */
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Separate left and right sections */
+  }
+  
+  /* Dark Overlay */
+  .hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(1, 45, 63, 0.85); /* Dark overlay */
+    z-index: 1;
+  }
+  
+  /* Content Wrapper */
+  .hero-content {
+    position: relative;
+    z-index: 2; /* Ensure content is above the global overlay */
+    display:flex;
+    justify-content: space-between; /* Space out left and right sections */
+    width: 90%; /* Adjust width of the inner content */
+    height: 100%;
+  }
+  
+  /* Left Section: Text */
+  .hero-left {
+    flex: 1;
+    display: flex;
+    flex-direction:column;
+    justify-content:center; /* Push content to the bottom */
+    text-align: left;
+    margin-bottom: 10px; /* Add spacing from the bottom */
+    padding-left: 30px; /* Add spacing from the left edge */
+
+  }
+  
+  .hero-left h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #78ba50; /* Green for "Thickness" */
+    margin-bottom: 10px;
+  }
+  
+  .hero-left p {
+    font-size: 1.5rem;
+    color: #f6f6f6; /* White for the tagline */
+    margin-bottom: 10px;
+  }
+  
+  .line-section {
+    margin-top: 10px;
+
+  }
+  
+  .line-section hr {
+    border: 0;
+    border-top: 2px solid #ffffff; /* White line */
+    width: 50%; /* Adjust width (e.g., 50% of the parent container) */
+    margin: 10px 0; /* Add spacing above and below */
+    align-self: flex-start; /* Align the line to the left */
+  }
+  
+  /* Right Section: Logo and Text */
+  .hero-right {
+    position: relative;
+    width: 30%; /* Adjust width for the right block */
+    height: 100%; /* Full height of hero section */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center vertically */
+    align-items: center; /* Center horizontally */
+    text-align: center;
+    z-index: 3; /* Ensure the content is above the overlay */
+  }
+  
+  /* Vertical Overlay */
+  .hero-right .vertical-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+      rgba(0, 39, 52, 0.217),
+      rgba(0, 0, 0, 0.9)
+    ); /* Vertical gradient effect */
+    z-index: 2; /* Place overlay behind the text and logo */
+  }
+  
+  /* Logo */
+  .hero-right img {
+    position: relative;
+    z-index: 3; /* Ensure logo is above the overlay */
+    height: 120px; /* Adjust logo size */
+    margin-bottom: 10px;
+  }
+  @media (max-width: 768px) {
+    /* For mobile phones */
+    .hero-section {
+      height: auto; /* Adjust height */
+      padding: 20px 0; /* Add spacing */
+    }
+  
+    .hero-content {
+      flex-direction: column; /* Stack sections vertically */
+      align-items: center; /* Center align content */
+    }
+  
+    .hero-left {
+      margin-bottom: 20px; /* Add bottom margin */
+      text-align: center; /* Center-align text */
+    }
+  
+    .hero-left h1 {
+      font-size: 2rem; /* Reduce heading size further */
+    }
+  
+    .hero-left p {
+      font-size: 1rem; /* Reduce tagline size further */
+    }
+  
+    .line-section hr {
+      width: 60%; /* Shorten the line */
+    }
+  
+    .hero-right {
+      width: 100%; /* Take full width */
+      height: auto; /* Adjust height */
+    }
+  
+    .hero-right img {
+      height: 80px; /* Reduce logo size for mobile */
+    }
+  
+    .hero-right p {
+      font-size: 1rem; /* Adjust text size */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    /* For smaller mobile screens */
+    .hero-left h1 {
+      font-size: 1.8rem; /* Further reduce heading size */
+    }
+  
+    .hero-left p {
+      font-size: 0.9rem; /* Further reduce tagline size */
+    }
+  
+    .line-section hr {
+      width: 50%; /* Shorten the line even more */
+    }
+  
+    .hero-right img {
+      height: 70px; /* Reduce logo size further */
+    }
+  
+    .hero-right p {
+      font-size: 0.9rem; /* Smaller text */
+    }
+  }
+ 
+
+  /* About Section */
+.about-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 50px 0;
+  background-color: #f6f6f6; /* Light background */
+}
+
+.about-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 90%;
+  max-width: 1200px; /* Maximum width for content */
+  gap: 30px; /* Spacing between image and content */
+  animation: fadeIn 1s ease-in-out;
+}
+
+/* Left Section: Image */
+.about-image img {
+  width: 100%;
+  max-width: 500px; /* Restrict image width */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 8px; /* Add rounded corners */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.about-image img:hover {
+  transform: scale(1.05); /* Slight zoom effect */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15); /* Enhance shadow */
+}
+
+/* Right Section: Content */
+.about-content {
+  flex: 1; /* Take remaining space */
+  text-align: left;
+  background-color: #012d3f; /* Dark blue background */
+  padding: 30px;
+  border-radius: 8px; /* Add rounded corners */
+  color: #ffffff; /* White text color */
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* Spacing between elements */
+  animation: fadeInRight 1s ease-in-out;
+}
+
+.about-button {
+  background-color: #78ba50; /* Green button */
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 20px;
+  padding: 10px 20px;
+  cursor: pointer;
+  align-self: flex-start; /* Align button to the left */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  transition: all 0.3s ease;
+}
+
+.about-button:hover {
+  background-color: #66a842; /* Darker green on hover */
+  transform: translateY(-3px) scale(1.05); /* Lift and slight enlarge effect */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.about-content p {
+  font-size: 1rem;
+  line-height: 1.6; /* Increase line spacing */
+  margin: 0;
+  animation: fadeInUp 1.5s ease-in-out;
+}
+
+.about-logo {
+  display: flex;
+  justify-content: flex-start; /* Align logo to the left */
+  margin-top: 20px;
+  animation: fadeIn 1.2s ease-in-out;
+}
+
+.about-logo img {
+  height: 50px; /* Adjust logo height */
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.about-logo img:hover {
+  transform: rotate(15deg); /* Rotate logo slightly */
+  filter: brightness(1.2); /* Brighten on hover */
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .about-container {
+    flex-direction: column; /* Stack content vertically */
+    align-items: center; /* Center-align */
+    gap: 20px;
+  }
+
+  .about-content {
+    text-align: center; /* Center-align text */
+  }
+
+  .about-button {
+    align-self: center; /* Center the button */
+  }
+
+  .about-logo {
+    justify-content: center; /* Center the logo */
+  }
+}
+
+@media (max-width: 768px) {
+  .about-image img {
+    max-width: 100%; /* Make image scale */
+  }
+
+  .about-content {
+    padding: 20px;
+  }
+
+  .about-button {
+    font-size: 0.9rem; /* Adjust button size */
+    padding: 8px 16px;
+  }
+
+  .about-logo img {
+    height: 40px; /* Reduce logo size */
+  }
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+
+
+  /* Vision and Mission Section */
+.vision-mission-section {
+  background-color: #ffffff; /* White background */
+  padding: 50px 0; /* Top and bottom padding */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.vision-mission-container {
+  display: flex;
+  flex-direction: column; /* Stack sections vertically for default */
+  gap: 40px; /* Space between Vision and Mission sections */
+  width: 90%;
+  max-width: 1200px; /* Limit the container width */
+}
+
+/* Individual Section (Vision/Mission) */
+.vision, .mission {
+  display: flex;
+  align-items: center;
+  gap: 20px; /* Space between icon and text */
+}
+
+.icon-box {
+  flex-shrink: 0;
+  width: 60px;
+  height: 60px;
+  background-color: #78ba50; /* Green background */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px; /* Rounded corners for icon background */
+}
+
+.icon-box img {
+  width: 40px; /* Adjust icon size */
+  height: 40px;
+}
+
+.text-box {
+  flex: 1;
+}
+
+.text-box h2 {
+  font-size: 1.5rem;
+  color: #012d3f; /* Dark blue for heading */
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.text-box p {
+  font-size: 1rem;
+  color: #021b23; /* Slightly lighter text color */
+  line-height: 1.6; /* Increase line spacing for readability */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .vision-mission-container {
+    gap: 30px; /* Reduce spacing between sections */
+  }
+
+  .vision, .mission {
+    flex-direction: column; /* Stack icon and text vertically */
+    text-align: center;
+  }
+
+  .icon-box {
+    margin-bottom: 15px; /* Add spacing between icon and text */
+  }
+}
+
+
+
+
+
+
+
+/* Vision and Mission Section */
+.vision-mission-section {
+  background-color: #ffffff; /* White background */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0; /* Remove padding for full-width image alignment */
+}
+
+.vision-mission-image img {
+  width: 100%; /* Full width of the container */
+  height: auto; /* Maintain the image's aspect ratio */
+  object-fit: cover; /* Ensures proper cropping for different screen sizes */
+  max-height: 400px; /* Adjust the height to fit your design */
+  border-bottom: 5px solid #78ba50; /* Green border for separation */
+}
+
+/* Vision and Mission Content Container */
+.vision-mission-container {
+  display: flex;
+  flex-direction: column;
+  gap: 40px; /* Space between Vision and Mission sections */
+  width: 90%;
+  max-width: 1200px; /* Center alignment with max width */
+  padding: 30px 0; /* Add spacing below the image for content */
+}
+
+/* Vision and Mission Blocks */
+.vision, .mission {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px; /* Space between icon and text */
+}
+
+/* Icon Styling */
+.icon-box {
+  flex-shrink: 0;
+  width: 60px;
+  height: 60px;
+  background-color: #78ba50; /* Green background */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px; /* Rounded corners */
+}
+
+.icon-box img {
+  width: 30px;
+  height: 30px;
+}
+
+/* Text Styling */
+.text-box {
+  flex: 1;
+}
+
+.text-box h2 {
+  font-size: 1.5rem;
+  color: #012d3f; /* Dark blue heading */
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.text-box p {
+  font-size: 1rem;
+  color: #021b23; /* Lighter text color for better readability */
+  line-height: 1.6;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .vision-mission-container {
+    gap: 30px;
+  }
+
+  .vision, .mission {
+    flex-direction: column; /* Stack icon and text */
+    text-align: center;
+  }
+
+  .icon-box {
+    margin-bottom: 15px;
+  }
+}
+
+
+/* Vision and Mission Section */
+.vision-mission-section {
+    background-color: #ffffff; /* White background */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0; /* Remove padding for better alignment */
+  }
+  
+  .vision-mission-image {
+    width: 100%; /* Set the width of the image to 80% of the section */
+    max-width:1800px; /* Optional: Limit the maximum width */
+    margin: 0 auto; /* Center the image horizontally */
+  }
+  
+  .vision-mission-image img {
+    width: 100%; /* Scale image to the container width */
+    height: auto; /* Maintain aspect ratio */
+    object-fit: cover; /* Ensure proper cropping without stretching */
+    border-bottom: 5px solid #78ba50; /* Green bottom border for separation */
+  }
+  
+  /* Vision and Mission Content Container */
+  .vision-mission-container {
+    display: flex;
+    flex-direction: column;
+    gap: 40px; /* Space between Vision and Mission sections */
+    width: 90%;
+    max-width: 1200px; /* Center the content with max width */
+    padding: 30px 0; /* Add spacing below the image for content */
+  }
+  
+  /* Vision and Mission Blocks */
+  .vision, .mission {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px; /* Space between icon and text */
+  }
+  
+  /* Icon Styling */
+  .icon-box {
+    flex-shrink: 0;
+    width: 60px;
+    height: 60px;
+    background-color: #78ba50; /* Green background */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px; /* Rounded corners */
+  }
+  
+  .icon-box img {
+    width: 30px;
+    height: 30px;
+  }
+  
+  /* Text Styling */
+  .text-box {
+    flex: 1;
+  }
+  
+  .text-box h2 {
+    font-size: 1.5rem;
+    color: #012d3f; /* Dark blue heading */
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .text-box p {
+    font-size: 1rem;
+    color: #021b23; /* Lighter text color for better readability */
+    line-height: 1.6;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .vision-mission-container {
+      gap: 30px;
+    }
+  
+    .vision, .mission {
+      flex-direction: column; /* Stack icon and text */
+      text-align: center;
+    }
+  
+    .icon-box {
+      margin-bottom: 15px;
+    }
+  }
+
+
+
+  /* Values Section */
+/* This section acts as a container for the "Our Values" content, including the background image and value cards. */
+.values-section {
+    background-color: #ffffff; /* Sets the background color to white for a clean look. */
+    display: flex; /* Flexbox layout to arrange content. */
+    flex-direction: column; /* Align content vertically (column layout). */
+    align-items: center; /* Centers content horizontally. */
+    padding: 0; /* Removes default padding. */
+  }
+  
+  /* Background Image */
+  /* This block styles the top background image for the "Our Values" section. */
+  .values-background {
+    position: relative; /* Allows positioning of overlay and ensures elements inside can use absolute positioning. */
+    width: 100%; /* Makes the image span the full width of the section. */
+    height: 300px; /* Sets a fixed height for the background image. */
+    overflow: hidden; /* Ensures any content overflowing the container is hidden. */
+  }
+  
+  .values-background img {
+    width: 100%; /* Ensures the image spans the full width of the container. */
+    height: 100%; /* Adjusts height to fill the container. */
+    object-fit: cover; /* Ensures the image maintains aspect ratio while covering the container. */
+  }
+  
+  /* Overlay */
+  /* Adds a dark overlay on top of the background image for better text contrast. */
+  .values-background .overlay {
+    position: absolute; /* Covers the entire parent container. */
+    top: 0;
+    left: 0;
+    width: 100%; /* Full width of the container. */
+    height: 100%; /* Full height of the container. */
+    background-color: rgba(1, 45, 63, 0.45); /* Semi-transparent dark blue overlay. */
+    display:flex; /* Flexbox for centering content. */
+    align-items: center; /* Vertically centers the title inside the overlay. */
+    justify-content: center; /* Horizontally centers the title inside the overlay. */
+  }
+  
+  .values-background .overlay h2 {
+    color: #ffffff; /* White text for contrast against the dark overlay. */
+    font-size: 2.5rem; /* Large font size for prominence. */
+    font-weight: bold; /* Bold font for emphasis. */
+    text-transform: uppercase; /* Converts text to uppercase. */
+  }
+  
+  /* Values Cards */
+  /* Container for the individual value cards. */
+  .values-cards {
+    display: flex; /* Flexbox layout for horizontal alignment. */
+    flex-wrap: wrap; /* Ensures the cards wrap to the next line on smaller screens. */
+    justify-content: center; /* Centers the cards horizontally. */
+    gap: 30px; /* Adds spacing between the cards. */
+    margin-top: -50px; /* Creates a slight overlap effect with the background image. */
+    margin-bottom: 20px;
+    position: relative;
+    z-index: 2;
+    width: 90%; /* Ensures the container takes up 90% of the available width. */
+  }
+  
+  /* Individual Value Cards */
+  /* Styles for each value card (e.g., Sustainability, Quality, etc.). */
+  .value-card {
+    z-index: auto; /* Default stacking context, no explicit stacking priority. */
+
+    background-color: #ffffff; /* White background for the cards. */
+    border: 2px solid #78ba50; /* Green border to match the design theme. */
+    border-radius: 8px; /* Rounded corners for a modern look. */
+    width: 250px; /* Sets a fixed width for each card. */
+    padding: 20px; /* Adds padding inside the cards. */
+    text-align: center; /* Centers the text inside the cards. */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for a floating effect. */
+  }
+  
+  /* Icon Wrapper */
+  /* Container for the circular icons above each value card title. */
+  .value-card .icon-wrapper {
+    background-color: #ffffff; /* Dark blue background for the icons. */
+    border: 2px solid #78ba50;
+    width: 80px; /* Fixed width for the circular icon container. */
+    height: 80px; /* Fixed height for the circular icon container. */
+    border-radius: 50%; /* Creates a perfect circle. */
+    display: flex; /* Flexbox layout to center the icon inside the circle. */
+    align-items: center; /* Vertically centers the icon. */
+    justify-content: center; /* Horizontally centers the icon. */
+    z-index: 2; /* Ensure the icon is above the card background but below other content if necessary. */
+
+    margin: 0 auto 15px; /* Centers the circle and adds spacing below it. */
+  }
+  
+  .value-card .icon-wrapper img {
+    width: 40px; /* Sets the width of the icon image. */
+    height: 40px; /* Sets the height of the icon image. */
+  }
+  
+  /* Card Title */
+  .value-card h3 {
+    font-size: 1.2rem; /* Medium-sized text for the card title. */
+    color: #012d3f; /* Dark blue text for consistency with the theme. */
+    margin-bottom: 10px; /* Adds spacing below the title. */
+  }
+  
+  /* Divider */
+  .value-card .divider {
+    width: 40px; /* Sets the width of the divider line. */
+    height: 2px; /* Sets the height of the divider line. */
+    background-color: #78ba50; /* Green color to match the theme. */
+    margin: 10px auto; /* Centers the line and adds vertical spacing. */
+  }
+  
+  /* Card Text */
+  .value-card p {
+    font-size: 0.9rem; /* Smaller text for the descriptions. */
+    color: #021b23; /* Slightly darker text for readability. */
+    line-height: 1.4; /* Adjusts line spacing for better readability. */
+  }
+  
+  /* Responsive Design */
+  /* Adjustments for smaller screens (e.g., tablets and phones). */
+  @media (max-width: 768px) {
+    .values-cards {
+      gap: 20px; /* Reduces spacing between cards. */
+    }
+  
+    .value-card {
+      width: 90%; /* Makes the cards full-width on smaller devices. */
+    }
+  }
+
+/* Methodology Section */
+.methodology-section {
+  background-color: #ffffff;
+  padding: 40px 20px;
+  text-align: center;
+  font-family: 'Arial', sans-serif;
+}
+
+.methodology-header h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #012d3f;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+}
+
+/* Methodology Content */
+.methodology-content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Row Styling */
+.methodology-row {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+/* Cards */
+.methodology-card {
+  background-color: #ffffff;
+  border: 2px solid #78ba50;
+  border-radius: 8px;
+  width: 30%;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+  cursor: pointer;
+}
+
+/* Hover Effect */
+.methodology-card:hover {
+  transform: translateY(-10px); /* Slight upward movement */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Enhanced shadow */
+  background-color: #f0fdf4; /* Light green background */
+}
+
+/* Icon Wrapper */
+.icon-wrapper {
+  width: 60px;
+  height: 60px;
+  background-color: #f5f5f5;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 15px;
+  border: 2px solid #78ba50;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.icon-wrapper img {
+  width: 30px;
+  height: 30px;
+}
+
+/* Icon Animation on Hover */
+.methodology-card:hover .icon-wrapper {
+  background-color: #78ba50; /* Green background for the icon wrapper */
+  transform: rotate(360deg); /* Spin effect */
+}
+
+.methodology-card h3 {
+  font-size: 1rem;
+  color: #012d3f;
+  margin-bottom: 10px;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.methodology-card:hover h3 {
+  color: #78ba50; /* Green text on hover */
+}
+
+.methodology-card p {
+  font-size: 0.85rem;
+  color: #555555;
+  line-height: 1.5;
+  transition: color 0.3s ease;
+}
+
+.methodology-card:hover p {
+  color: #012d3f; /* Darker text on hover */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .methodology-card {
+    width: 45%;
+  }
+}
+
+@media (max-width: 480px) {
+  .methodology-card {
+    width: 90%;
+  }
+}
+/* Why Choose Us Section */
+.why-choose-us-section {
+  background-color: #f9f9f9; /* Softer background */
+  padding: 60px 20px;
+  text-align: center;
+  font-family: 'Arial', sans-serif;
+}
+
+/* Section Header */
+.why-choose-us-header h2 {
+  font-size: 2.5rem; /* Larger text */
+  font-weight: bold;
+  color: #012d3f; /* Dark blue */
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  padding: 15px 30px;
+  border-radius: 8px;
+  background-color: rgba(1, 45, 63, 0.9); /* Dark overlay */
+  color: #ffffff; /* White text */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+/* Content */
+.why-choose-us-content p {
+  font-size: 1.2rem; /* Larger text for readability */
+  color: #333; /* Darker text */
+  line-height: 1.8;
+  margin-bottom: 30px;
+  padding: 0 15%;
+  animation: fadeInUp 1s ease-in-out;
+}
+
+/* Image Container */
+.why-choose-us-image-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.image-wrapper {
+  position: relative;
+  width: 80%; /* Wider container */
+  max-width: 600px;
+  border: 3px solid #78ba50; /* Thicker green border */
+  border-radius: 15px; /* Softer rounded corners */
+  overflow: hidden;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15); /* Slightly stronger shadow */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.image-wrapper:hover {
+  transform: scale(1.05); /* Larger zoom effect */
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2); /* Enhanced shadow */
+}
+
+.why-choose-us-image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Icon Overlay */
+.icon-overlay {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  width: 60px;
+  height: 60px;
+  background-color: rgba(120, 186, 80, 0.9); /* Bright green background */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15); /* Subtle shadow */
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+.icon-overlay img {
+  width: 30px;
+  height: 30px;
+}
+
+.image-wrapper:hover .icon-overlay {
+  transform: scale(1.2); /* More pronounced pop-out effect */
+  opacity: 1;
+}
+
+/* Key Benefits Section */
+.key-benefits {
+  margin-top: 40px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.benefit-card {
+  background-color: #ffffff;
+  border: 2px solid #78ba50;
+  border-radius: 10px;
+  width: 300px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.benefit-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.benefit-card h3 {
+  font-size: 1.5rem;
+  color: #012d3f;
+  margin-bottom: 10px;
+}
+
+.benefit-card p {
+  font-size: 1rem;
+  color: #555;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .why-choose-us-content p {
+    padding: 0 10%;
+  }
+
+  .image-wrapper {
+    width: 90%;
+  }
+
+  .key-benefits {
+    gap: 15px;
+  }
+
+  .benefit-card {
+    width: 90%;
+  }
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/* Our Approach Section */
+.approach-section {
+  background-color: #ffffff; /* Clean white background */
+  padding: 60px 20px;
+}
+
+.approach-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Split into two equal columns */
+  gap: 40px;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  animation: fadeIn 1.2s ease-in-out;
+}
+
+.approach-text {
+  animation: fadeInLeft 1s ease-in-out;
+}
+
+.approach-text h2 {
+  font-size: 2.2rem;
+  color: #012d3f;
+  font-weight: bold;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.approach-text h2::after {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 4px;
+  background-color: #78ba50;
+  margin-top: 10px;
+  border-radius: 2px;
+}
+
+.approach-text p {
+  font-size: 1rem;
+  color: #555555;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.focus-areas {
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 10px;
+  border: 2px solid #78ba50;
+  animation: fadeIn 1.2s ease-in-out;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.focus-areas:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.focus-areas h3 {
+  font-size: 1.7rem;
+  color: #012d3f;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+}
+
+.focus-areas ul {
+  list-style: none;
+  padding: 0;
+}
+
+.focus-areas li {
+  font-size: 1rem;
+  color: #021b23;
+  margin-bottom: 10px;
+  position: relative;
+  padding-left: 30px;
+  transition: color 0.3s ease-in-out;
+}
+
+.focus-areas li::before {
+  content: "✔"; /* Icon instead of bullet point */
+  color: #78ba50;
+  position: absolute;
+  left: 0;
+  font-size: 1.2rem;
+}
+
+.focus-areas li:hover {
+  color: #78ba50;
+}
+
+.approach-images {
+  display: flex;
+  padding: 20px;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.approach-image {
+  width: 100%;
+  max-width: 250px;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+}
+
+.approach-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.approach-image:hover {
+  transform: scale(1.08); /* Zoom effect */
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
+}
+
+.approach-image::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.approach-image:hover::after {
+  opacity: 1; /* Dark overlay on hover */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .approach-container {
+    grid-template-columns: 1fr; /* Stack content vertically */
+    text-align: center;
+  }
+
+  .approach-text h2 {
+    font-size: 1.8rem;
+  }
+
+  .approach-text p {
+    font-size: 0.95rem;
+  }
+
+  .approach-images {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}

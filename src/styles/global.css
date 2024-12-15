@@ -1,0 +1,270 @@
+/* src/styles/global.css */
+
+/* Define the primary color palette */
+:root {
+  --bg-light: #f6f6f6;       /* Background light color */
+  --text-dark: #021b23;      /* Dark text color */
+  --primary: #78ba50;        /* Primary accent color */
+  --secondary: #012d3f;      /* Secondary background color */
+  --accent: #004158;         /* Additional accent color */
+}
+
+/* Global body styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  background-color: var(--bg-light);
+  color: var(--text-dark);
+}
+header, footer {
+
+  overflow-x: hidden; /* Prevents elements inside from overflowing */
+}
+/* Header styles */
+header {
+  background-color: var(--secondary);
+  color: var(--bg-light);
+  padding: 20px 20px;
+  display: flex;
+  font-size: 22px;
+  align-items: center; /* Vertically center the items */
+  justify-content: space-between; /* Space between the logo and navigation */
+
+}
+
+/* Logo styles */
+header img {
+  height: 50px; /* Set a consistent height for the logo */
+}
+
+/* Navigation styles */
+nav {
+  flex-grow: 1; /* Expands to fill space */
+  display: flex;
+  justify-content: flex-end; /* Align navigation menu to the right */
+}
+
+/* Navigation menu list styles */
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex; /* Displays the list items in a row */
+  gap: 1rem; /* Space between menu items */
+}
+
+/* Navigation menu item styles */
+nav ul li {
+  margin: 0;
+}
+
+/* Navigation links */
+nav ul li a {
+  text-decoration: none; /* Remove underline */
+  color: var(--bg-light); /* Set text color to light */
+  font-weight: bold; /* Make the text bold */
+  transition: color 0.3s ease; /* Smooth transition on hover */
+}
+
+/* Hover effect for navigation links */
+nav ul li a:hover {
+  color: var(--primary); /* Change color on hover */
+}
+/* Footer Styling */
+.footer {
+  background-color: #012d3f; /* Dark blue background */
+  color: #ffffff; /* White text color */
+  padding: 20px;
+  text-align: center;
+  font-family: 'Arial', sans-serif;
+  position: relative;
+  overflow: hidden;
+}
+
+.footer-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px 10px;
+}
+
+.footer-logo h2 {
+  font-size: 1.8rem;
+  color: #78ba50; /* Green for logo text */
+  margin: 0;
+}
+
+.footer-info p {
+  font-size: 0.9rem;
+  margin: 5px 0;
+}
+
+.footer-info a {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+.footer-social {
+  display: flex;
+  gap: 15px;
+}
+
+.footer-social a {
+  color: #78ba50; /* Green for icons */
+  font-size: 1.5rem;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.footer-social a:hover {
+  color: #ffffff; /* White on hover */
+  transform: scale(1.2); /* Slight zoom effect */
+}
+
+.footer-links {
+  margin-top: 10px;
+  font-size: 0.85rem;
+}
+
+.footer-links a {
+  color: #78ba50; /* Green links */
+  text-decoration: none;
+  margin: 0 10px;
+  transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: #ffffff; /* White on hover */
+}
+
+.back-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #78ba50; /* Green button */
+  color: #ffffff;
+  border: none;
+  border-radius: 50%;
+  font-size: 1.2rem;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.back-to-top:hover {
+  background-color: #66a842; /* Darker green */
+  transform: translateY(-5px); /* Lift effect */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .footer-content {
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+  }
+
+  .footer-social {
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .back-to-top {
+    width: 40px;
+    height: 40px;
+    font-size: 1rem;
+  }
+}
+
+
+/* Optional: Ensure the main content doesn't overlap the footer */
+main {
+  min-height: 80vh; /* Pushes the footer to the bottom of the page */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  header {
+      flex-direction: column; /* Stack the logo and menu vertically */
+  }
+
+  nav ul {
+      flex-direction: column; /* Stack menu items vertically */
+      align-items: center; /* Center menu items */
+      gap: 0.5rem;
+  }
+
+  header img {
+      margin-bottom: 1rem; /* Add space between the logo and menu */
+  }
+
+  main {
+      padding: 1rem;
+  }
+
+  footer {
+      font-size: 0.9rem; /* Adjust font size for smaller screens */
+  }
+}
+
+/* Policy Page Styles */
+.policy-page {
+  padding: 40px 20px;
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+  max-width: 900px;
+  margin: 0 auto;
+  color: #012d3f; /* Dark text color */
+}
+
+.policy-page h1 {
+  font-size: 2.5rem;
+  color: #78ba50; /* Green for headings */
+  margin-bottom: 20px;
+}
+
+.policy-page h2 {
+  font-size: 1.8rem;
+  color: #012d3f; /* Dark blue for subheadings */
+  margin-top: 20px;
+}
+
+.policy-page p {
+  font-size: 1rem;
+  margin-bottom: 15px;
+}
+
+.policy-page a {
+  color: #78ba50;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.policy-page a:hover {
+  text-decoration: underline;
+}
+.footer-powered {
+  margin-top: 20px;
+  font-size: 0.9rem;
+  color: #555555;
+  text-align: center;
+}
+
+.footer-powered a {
+  color: #78ba50;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.footer-powered a:hover {
+  text-decoration: underline;
+}

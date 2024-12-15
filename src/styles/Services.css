@@ -1,0 +1,102 @@
+/* General Styling */
+.services-page {
+  padding: 40px 20px;
+  background-color: #f4f4f4;
+  font-family: 'Arial', sans-serif;
+}
+
+/* Header Section */
+.services-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.services-header h1 {
+  font-size: 2.8rem;
+  color: #ffffff;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.services-header p {
+  font-size: 1.2rem;
+  color: #78ba50;
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+/* Services Grid */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 20px;
+  justify-content: center;
+  padding-top: 20px;
+}
+
+/* Service Card */
+.service-card {
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card.reverse {
+  flex-direction: column-reverse;
+}
+
+/* Image Section */
+.service-image img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.service-card:hover .service-image img {
+  transform: scale(1.1);
+}
+
+/* Details Section */
+.service-details {
+  padding: 20px;
+  transition: all 0.3s ease-in-out;
+}
+
+.service-details h2 {
+  font-size: 1.8rem;
+  color: #012d3f;
+  margin-bottom: 10px;
+  position: relative;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.service-details p {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.6;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+/* Hover Effect on Text */
+.service-card:hover .service-details h2 {
+  color: #78ba50; /* Change color */
+  transform: translateY(-5px); /* Slight lift effect */
+}
+
+.service-card:hover .service-details p {
+  color: #012d3f; /* Change color */
+  transform: translateY(-3px); /* Slight lift effect */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .services-grid {
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  }
+}
